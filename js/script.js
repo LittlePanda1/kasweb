@@ -276,3 +276,18 @@ function showSlides() {
   setTimeout(showSlides, 3000); 
 }
 showSlides();
+
+document.addEventListener('DOMContentLoaded', function(){
+    let video = document.getElementById('officiallyVid');
+    let currentSection = document.getElementById('page2');
+
+    video.addEventListener('ended', function(){
+        let nextSection = document.getElementById('page3');
+        
+        currentSection.style.display="none";
+        
+        if(nextSection){
+            nextSection.style.display="block";
+        }
+    })
+})
