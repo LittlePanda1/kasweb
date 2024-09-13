@@ -1,6 +1,7 @@
 const userInfo = {
     usn: "CutiePie",
-    pw: "24122023"
+    pw: "24122023",
+    usn: "cutiepie"
 }
 const ans1 = ["Gultik","Blok M", "Gultik Blok M","gultik","blok m","gultik blok m"];
 
