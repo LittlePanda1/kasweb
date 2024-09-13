@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <section class="login-page" style="display: none;">
+        <section class="login-page" id="loginPage" style="display: none;">
             <h1 id="loginSign">Welcome to OurMemories</h1>
             <p id="loginDesc"> Coba tebak usn dan Passwordnya yaw <img src="assets/smile-beam.svg" style="width: 1em;" height="inherit;">.<br> Hint : Usn = your nick name from me!<br> pw : our sacred date. Good Luck!</p>
             <form id="login">
@@ -20,34 +20,34 @@
             </form>
         </section>
 
-    <section class="home" style="display: block;">
+    <section class="home" id="homepage" style="display: block;">
         <h1 id="homeUser">Hallo, Khurri Aini Syifa! </h1>
         <p id="homeDesc">Selamat berhasil masuk di OurMemories, dimana memori kita berada <img src="assets/smile-beam.svg" style="width: 1em;" height="inherit;">.<br> Sebelum lanjut aku mau kasih kamu teka teki!</p>
         <p id="quest1"> Kapan pertama kali kita ngedate berdua hum? </p>
 
-        <form id="answer1">
+        <form id="answer">
             <label for="answer1"> Jawab disini yaw</label>
             <input type="text" name="answer1" id="answer1">
             <button type="button" class="button" id="answerBtn" onclick="sub1Func()">Submit</button>
         </form>
     </section>
-    <section class="page1" style="display: none;">
-        <video id="firstDate" width="640" height="320" controls>
+    <section class="home" id="page1" style="display: none;">
+        <video id="firstDate" style="width: 50%; height: auto;" controls>
             <source src="/assets/firstDate.mp4" type="video/mp4">
         </video>
         <p id="page1Desc" style="text-align: center;"> Betul!! Blok M wkwkwk, ada videonya ko aku wkwk, lucu banget dulu kita</p>
-        <p>okaii kalau sudah selesai, pencet next yaaw di pojok kanan bawah nantii</p>
+        <p>okaii kalau sudah selesai, pencet next yaaw</p>
 
-        <button class="nextBtn" type="button">Next yup</button>
+        <button class="button" id="nextBtn" type="button" onclick="nextbtn()">Next yup</button>
     </section>
-    <section class="page2" style="display: none;">
+    <section class="home" id="page2" style="display: none;">
         <h1 id="pageHead2" style="text-align: center;"> Officially Mine!!!</h1>
         <p> Video di bawah ini adalah bagaimana proses aku menjadikan kamu official sebagai pacarku!!</p>
-        <video id="officiallyVid" width="640" height="320" controls>
+        <video id="officiallyVid" style="width: 100%; height: auto;" controls>
             <source src="/assets/officiallyMine.mp4" type="video/mp4">
         </video>
     </section>
-    <section class="page3" style="display: none;">
+    <section class="home" id="page3" style="display: none;">
         <h1 id="pageHead3"> Semua kenangan kita.</h1>
         <div class="slideshow-container">
             <!--nanti gambarnya via js-->
