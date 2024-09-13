@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="login-page" style="display: block;">
+            <h1 id="loginSign">Hallo Selamat Datang</h1>
+            <p id="loginDesc"> Silahkan masukan akun kamu</p>
+            <form id="login">
+                <label for="usn">Username</label><br>
+                <input type="text" name="usn" id="usn"><br>
+                <label for="pw">Password</label><br>
+                <input type="password" name="pw" id="pw"><br>
+                <button type="button" id="loginBtn" onclick="loginFunc()">Login</button>
+            </form>
+        </section>
+
+    <section class="home" style="display: none;">
+        <h1 id="homeUser">Hallo, Khurri Aini Syifa! </h1>
+        <p id="homeDesc">Selamat datang di MemoWeb, dimana memori kita berada <img src="assets/smile-beam.svg" style="width: 1em;" height="inherit;">. Sebelum lanjut aku mau kasih kamu teka teki</p>
+        <p id="quest1"> Kapan pertama kali kita ngedate berdua hum? </p>
+
+        <form id="answer1>">
+            <label for="answer1"> Jawab disini yaw</label>
+            <input type="text" name="answer1" id="answer1">
+            <button type="button" class="answerBtn" onclick="sub1Func()">Submit</button>
+        </form>
+    </section>
+
+    
+    <script src="js/script.js"></script>   
+</body>
+
+</html>

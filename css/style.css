@@ -1,0 +1,60 @@
+body{
+    margin: auto;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.login-page{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+#loginSign {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+#loginDesc{
+    margin-bottom: 20px ;
+    font-size: 14px;
+    color: black;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 0;
+}
+input[type="text"],
+input[type="password"] {
+    width : 100%;
+    padding : 5px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#loginBtn{
+    width: 50%;
+    padding: 5px;
+    font-size: medium;
+    background-color: lightblue;
+    border: none;
+    border-radius: 10px;
+    
+}
+#loginBtn:hover{
+    background-color:aquamarine
+}
