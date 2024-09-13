@@ -31,6 +31,13 @@ function loginFunc() {
             home.style.display="block";
            }
         }
+
+    document.getElementById("answer1").addEventListener("keydown", function(event){
+        if(event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("answerBtn").click();
+        }
+    });
         }
         
     

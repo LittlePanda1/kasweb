@@ -38,7 +38,7 @@ label {
 }
 input[type="text"],
 input[type="password"] {
-    width : 100%;
+    width : 200px;
     padding : 5px;
     margin-bottom: 20px;
     border: 1px solid;
@@ -46,15 +46,90 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-#loginBtn{
-    width: 50%;
+.button{
+    width: 100px;
     padding: 5px;
     font-size: medium;
-    background-color: lightblue;
-    border: none;
+    background-color: aquamarine;
+    border: 1;
+    cursor: pointer, ;
     border-radius: 10px;
     
 }
-#loginBtn:hover{
-    background-color:aquamarine
+.button:hover{
+    background-color:lightblue;
+}
+
+.home {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin: 20px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.home:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+#homeUser {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+#homeDesc {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+#quest1 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #444;
+    font-style: italic;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: aquamarine;
+    outline: none;
+}
+
+.button {
+    width: 120px;
+    padding: 10px;
+    font-size: medium;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: lightblue;
 }
