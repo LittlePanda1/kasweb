@@ -335,7 +335,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let video = document.getElementById('officiallyVid');
   let currentSection = document.getElementById('page2');
-  let lastBtn = document.getElementById('lastBtn');
 
   video.addEventListener('ended', function() {
     let nextSection = document.getElementById('page3');

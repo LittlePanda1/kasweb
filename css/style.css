@@ -136,30 +136,25 @@ label {
 }
 
 .slideshow-container {
-    max-width: 900px;
-    position:relative;
+    position: relative;
     margin: auto;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    background: #f0f0f0;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-  
-  .mySlides img {
-    display:block;
-    margin :auto;
+    background: transparent; 
+}
+
+.mySlides {
+    display: block; 
+}
+
+.mySlides img {
+    display: block;
+    margin: auto;
     width: auto;
     max-width: 100%;
-    max-height: 100%;
     height: auto;
-    transition: transform 1s ease;
-  }
+    max-height: 299px;
+}
+
   
   .ratingPage {
     background-color: white;
@@ -240,4 +235,8 @@ textarea:focus {
 
 .popup-overlay.popup-open {
     display: block;
+}
+#lastPageDesc {
+
+    font-size: small;
 }
