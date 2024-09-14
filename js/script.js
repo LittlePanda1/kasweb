@@ -276,7 +276,7 @@ imageUrls.forEach(url => {
 
 function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
-  let page3 = document.getElementById("page3");
+  let lastBtn = document.getElementById('lastBtn');
   let audio = document.getElementById("slideshowAudio");
 
   for (let i = 0; i < slides.length; i++) {
@@ -295,6 +295,13 @@ function showSlides() {
       audio.play();
       audio.volume = 0.2;
     }
+
+  } 
+
+  if(slideIndex === slideIndex.length){
+    lastBtn.style.display="block";
+  } else {
+    lastBtn.style.display="none";
   }
 }
 
@@ -308,11 +315,27 @@ function stopSlides() {
   }
 }
 
+function lastBtn(){
+  let page3 = document.getElementById('page3');
+  let lastPage = document.getElementById('lastPage');
+
+  if(page3){
+    page3.style.display="none";
+  }
+
+  if(lastPage) {
+    lastPage.style.display="block";
+  }
+
+  stopSlides();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   showSlides(); 
 
   let video = document.getElementById('officiallyVid');
   let currentSection = document.getElementById('page2');
+  let lastBtn = document.getElementById('lastBtn');
 
   video.addEventListener('ended', function() {
     let nextSection = document.getElementById('page3');
