@@ -288,9 +288,13 @@ function showSlides() {
 
   slides[slideIndex - 1].style.display = "block";
 
+  if(slideIndex === slideIndex.length){
+    lastBtn.style.display="block";
+  } else {
+    lastBtn.style.display="none";
+  }
 
-  if (slides[slideIndex - 1].style.display === "block" && page3.style.display === "block") {
-    slideInterval = setTimeout(showSlides, 2000);
+  slideInterval = setTimeout(showSlides, 2000)
     if (audio.paused) {
       audio.play();
       audio.volume = 0.2;
@@ -298,12 +302,8 @@ function showSlides() {
 
   } 
 
-  if(slideIndex === slideIndex.length){
-    lastBtn.style.display="block";
-  } else {
-    lastBtn.style.display="none";
-  }
-}
+
+
 
 function stopSlides() {
   let audio = document.getElementById("slideshowAudio");
