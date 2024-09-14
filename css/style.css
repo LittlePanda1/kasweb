@@ -161,3 +161,83 @@ label {
     transition: transform 1s ease;
   }
   
+  .ratingPage {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-height: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.ratingPage h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star.selected {
+    color: gold;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: aquamarine;
+    outline: none;
+}
+
+#submitBtn {
+    width: 120px;
+    padding: 10px;
+    font-size: medium;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: lightblue;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+.popup-overlay.popup-open {
+    display: block;
+}
