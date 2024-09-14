@@ -1,23 +1,23 @@
 const userInfo = {
-    usn: "CutiePie",
+    usn: "cutiepie",
     pw: "24122023"
 }
 
 function loginFunc() {
-    let username = document.getElementById("usn").value;
+    let username = document.getElementById("usn").value.trim().toLowerCase();
     let password = document.getElementById("pw").value;
 
     if(username === "" || password === ""){
-        alert("Kotak tidak boleh kosong!");
+        alert("Kotaknya gaboleh kosong woe");
         }
-        else if(username !== userInfo.usn){
-            alert("Username anda salah!");
+        else if(username !== userInfo.usn.toLowerCase()){
+            alert("salahh usnnyaa wkwk coba lagii");
         }
         else if(password !== userInfo.pw) {
-            alert("Password anda salah!");
+            alert("passwordnya yang salah nih, masa bisa salah:(");
         }
         else{
-            alert("Selamat Anda Berhasil Login!!!");
+            alert("Selamat semuanya udah benerr hehehe!!!");
             let loginPage = document.getElementById("loginPage");
             if(loginPage){
                 loginPage.style.display="none";
@@ -58,16 +58,22 @@ function loginFunc() {
             
         }
 
-document.addEventListener('DOMContentLoaded',function(){
-    nextBtn()
+    function nextBtn(){
     let page1 = document.getElementById("page1");
     let page2 = document.getElementById("page2");
+    let video = document.getElementById("firstDate");
     if(page1){
         page1.style.display="none";
         page2.style.display="block";
     }
+    if(page1.style.display === "none"){
+      if(!video.paused){
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
     
-});
+}
 
 const slideshowContainer = document.querySelector('.slideshow-container');
 const imageUrls = [
@@ -270,34 +276,37 @@ imageUrls.forEach(url => {
 
 function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
+  let page3 = document.getElementById("page3");
+  let audio = document.getElementById("slideshowAudio");
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  
+
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1; }
 
   slides[slideIndex - 1].style.display = "block";
-  
-  if (slides[slideIndex - 1].style.display === "block") {
-    slideInterval = setTimeout(showSlides, 2000); 
-  if(audio.paused){
-    audio.play();
-    audio.volume = 0.2;
+
+
+  if (slides[slideIndex - 1].style.display === "block" && page3.style.display === "block") {
+    slideInterval = setTimeout(showSlides, 2000);
+    if (audio.paused) {
+      audio.play();
+      audio.volume = 0.2;
+    }
   }
-}
 }
 
 function stopSlides() {
-    let audio = document.getElementById("slideshowAudio");
-    clearTimeout(slideInterval);
-  
-    if (!audio.paused) {
-      audio.pause();
-      audio.currentTime = 0; 
-    }
+  let audio = document.getElementById("slideshowAudio");
+  clearTimeout(slideInterval);
+
+  if (!audio.paused) {
+    audio.pause();
+    audio.currentTime = 0; 
   }
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   showSlides(); 
@@ -320,3 +329,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+  

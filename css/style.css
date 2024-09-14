@@ -66,8 +66,9 @@ input[type="password"] {
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     width: 400px;
+    max-height: 100vh;
     text-align: center;
-    margin: 20px auto;
+    margin: 10px auto;
     transition: all 0.3s ease-in-out;
 }
 
@@ -153,9 +154,10 @@ label {
   .mySlides img {
     display:block;
     margin :auto;
-    width: 100%;
+    width: auto;
     max-width: 100%;
-    height: fit-content;
+    max-height: 100%;
+    height: auto;
     transition: transform 1s ease;
   }
   
