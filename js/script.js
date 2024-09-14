@@ -330,4 +330,51 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+  document.getElementById('ratingBtn').addEventListener('click', function(){
+    document.getElementById('ratingPage').classList.add('popup-open');
+    document.querySelector('.poup-overlay').classList.add('popup-open');
+  });
   
+  const stars = document.querySelectorAll('.star');
+  let ratingValue = 0;
+
+  stars.forEach(star =>{
+    star.addEventListener('click', function(){
+      ratingValue = this.getAttribute('data-value');
+      stars.forEach(s =>s.classList.remove('selected'));
+      for (let i=0; i<ratingValue;i++){
+        stars[i].classList.add('selected');
+      }
+    });
+  });
+
+  document.getElementById('submitBtn').addEventListener('click',function(){
+    const message = document.getElementById('message').value;
+
+    if(ratingValue === 0){
+      alert("isi dongg jangan dikosongin wkwk");
+      return;
+    }
+
+    const ratingData = {
+      rating : ratingValue,
+      comment : message 
+    };
+
+    fetch('/rating',{
+      method : 'POST',
+      header : {
+        'Content-type' : 'application/json',
+      },
+      body : JSON.stringify(ratingData)
+    })
+    .then(response => response.text())
+    .then(data =>{
+      alert("Maaciii sudah rating websitenyaa!")
+      document.getElementById('ratingPage').classList.remove('popup-open');
+      document.querySelector('.popup-overlay').classList.remove('popup-open');
+    })
+    .catch(error =>{
+      console.error('Error:',error);
+    });
+  });
