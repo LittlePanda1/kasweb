@@ -114,7 +114,7 @@ label {
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus {
+#answer1[type="text"]:focus {
     border-color: aquamarine;
     outline: none;
 }
@@ -135,10 +135,15 @@ input[type="text"]:focus {
 }
 
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
+    max-width: 900px;
+    position:relative;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background: #f0f0f0;
   }
   
   .mySlides {
@@ -146,8 +151,11 @@ input[type="text"]:focus {
   }
   
   .mySlides img {
-    display: block;
+    display:block;
+    margin :auto;
     width: 100%;
+    max-width: 100%;
+    height: fit-content;
     transition: transform 1s ease;
   }
   

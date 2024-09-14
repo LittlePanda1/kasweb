@@ -57,7 +57,9 @@ function loginFunc() {
 
             
         }
-function nextBtn(){
+
+document.addEventListener('DOMContentLoaded',function(){
+    nextBtn()
     let page1 = document.getElementById("page1");
     let page2 = document.getElementById("page2");
     if(page1){
@@ -65,23 +67,23 @@ function nextBtn(){
         page2.style.display="block";
     }
     
-}
+});
 
 const slideshowContainer = document.querySelector('.slideshow-container');
 const imageUrls = [
-'/assets/5.heic',
+'/assets/5.jpg',
 '/assets/6.JPG',
-'/assets/7.heic',
-'/assets/8.heic',
-'/assets/9.heic',
-'/assets/10.heic',
-'/assets/11.heic',
-'/assets/12.heic',
-'/assets/13.heic',
-'/assets/14.heic',
+'/assets/7.jpg',
+'/assets/8.jpg',
+'/assets/9.jpg',
+'/assets/10.jpg',
+'/assets/11.jpg',
+'/assets/12.jpg',
+'/assets/13.jpg',
+'/assets/14.jpg',
 '/assets/15.JPG',
 '/assets/16.JPG',
-'/assets/17.heic',
+'/assets/17.jpg',
 '/assets/18.JPG',
 '/assets/19.PNG',
 '/assets/20.JPG',
@@ -89,22 +91,22 @@ const imageUrls = [
 '/assets/22.JPG',
 '/assets/23.JPG',
 '/assets/24.JPG',
-'/assets/25.heic',
+'/assets/25.jpg',
 '/assets/26.JPG',
-'/assets/27.heic',
+'/assets/27.jpg',
 '/assets/28.HEIF',
-'/assets/29.heic',
-'/assets/30.heic',
-'/assets/31.heic',
+'/assets/29.jpg',
+'/assets/30.jpg',
+'/assets/31.jpg',
 '/assets/32.JPG',
 '/assets/33.JPG',
 '/assets/34.JPG',
-'/assets/35.heic',
-'/assets/36.heic',
-'/assets/37.heic',
-'/assets/38.heic',
-'/assets/39.heic',
-'/assets/40.heic',
+'/assets/35.jpg',
+'/assets/36.jpg',
+'/assets/37.jpg',
+'/assets/38.jpg',
+'/assets/39.jpg',
+'/assets/40.jpg',
 '/assets/41.JPG',
 '/assets/42.JPG',
 '/assets/43.JPG',
@@ -112,7 +114,6 @@ const imageUrls = [
 '/assets/45.JPG',
 '/assets/46.JPG',
 '/assets/47.JPG',
-'/assets/48.MP4',
 '/assets/49.JPG',
 '/assets/50.JPG',
 '/assets/51.JPG',
@@ -135,43 +136,42 @@ const imageUrls = [
 '/assets/68.JPG',
 '/assets/69.JPG',
 '/assets/70.JPG',
-'/assets/71.heic',
-'/assets/72.heic',
-'/assets/73.heic',
-'/assets/74.heic',
+'/assets/71.jpg',
+'/assets/72.jpg',
+'/assets/73.jpg',
+'/assets/74.jpg',
 '/assets/75.JPG',
 '/assets/76.JPG',
-'/assets/77.heic',
-'/assets/78.heic',
-'/assets/79.heic',
-'/assets/80.heic',
+'/assets/77.jpg',
+'/assets/78.jpg',
+'/assets/79.jpg',
+'/assets/80.jpg',
 '/assets/81.JPG',
 '/assets/82.JPG',
 '/assets/83.JPG',
 '/assets/84.JPG',
 '/assets/85.JPG',
 '/assets/86.JPG',
-'/assets/87.heic',
-'/assets/88.heic',
+'/assets/87.jpg',
+'/assets/88.jpg',
 '/assets/89.jpg',
-'/assets/90.heic',
-'/assets/91.heic',
-'/assets/92.heic',
-'/assets/93.heic',
+'/assets/90.jpg',
+'/assets/91.jpg',
+'/assets/92.jpg',
+'/assets/93.jpg',
 '/assets/94.jpg',
 '/assets/95.jpg',
 '/assets/96.jpg',
-'/assets/97.heic',
+'/assets/97.jpg',
 '/assets/98.JPG',
 '/assets/99.JPG',
 '/assets/100.JPG',
 '/assets/101.JPG',
-'/assets/102.heic',
-'/assets/103.heic',
-'/assets/104.heic',
-'/assets/105.HEIF',
+'/assets/102.jpg',
+'/assets/103.jpg',
+'/assets/104.jpg',
 '/assets/106.JPG',
-'/assets/107.heic',
+'/assets/107.jpg',
 '/assets/108.JPG',
 '/assets/109.JPG',
 '/assets/110.JPG',
@@ -180,7 +180,7 @@ const imageUrls = [
 '/assets/113.JPG',
 '/assets/114.JPG',
 '/assets/115.JPG',
-'/assets/116.heic',
+'/assets/116.jpg',
 '/assets/117.JPG',
 '/assets/118.JPG',
 '/assets/119.JPG',
@@ -188,62 +188,62 @@ const imageUrls = [
 '/assets/121.JPG',
 '/assets/122.JPG',
 '/assets/123.JPG',
-'/assets/124.HEIC',
-'/assets/125.HEIC',
-'/assets/126.heic',
-'/assets/127.heic',
+'/assets/124.jpg',
+'/assets/125.jpg',
+'/assets/126.jpg',
+'/assets/127.jpg',
 '/assets/128.JPG',
 '/assets/129.JPG',
 '/assets/130.JPG',
 '/assets/131.JPG',
 '/assets/132.JPG',
-'/assets/133.HEIC',
-'/assets/134.HEIC',
-'/assets/135.HEIC',
+'/assets/133.jpg',
+'/assets/134.jpg',
+'/assets/135.jpg',
 '/assets/136.JPG',
-'/assets/137.HEIC',
-'/assets/138.heic',
-'/assets/139.HEIC',
+'/assets/137.jpg',
+'/assets/138.jpg',
+'/assets/139.jpg',
 '/assets/140.JPG',
 '/assets/141.JPG',
-'/assets/142.HEIC',
-'/assets/143.HEIC',
+'/assets/142.jpg',
+'/assets/143.jpg',
 '/assets/144.JPG',
 '/assets/145.JPG',
-'/assets/146.HEIC',
-'/assets/147.HEIC',
+'/assets/146.jpg',
+'/assets/147.jpg',
 '/assets/148.JPG',
 '/assets/149.JPG',
 '/assets/150.JPG',
 '/assets/151.JPG',
 '/assets/152.JPG',
 '/assets/153.JPG',
-'/assets/154.HEIC',
-'/assets/155.HEIC',
-'/assets/156.HEIC',
+'/assets/154.jpg',
+'/assets/155.jpg',
+'/assets/156.jpg',
 '/assets/157.JPG',
 '/assets/158.JPG',
 '/assets/159.JPG',
 '/assets/160.JPG',
-'/assets/161.HEIC',
-'/assets/162.HEIC',
-'/assets/163.HEIC',
-'/assets/164.HEIC',
+'/assets/161.jpg',
+'/assets/162.jpg',
+'/assets/163.jpg',
+'/assets/164.jpg',
 '/assets/165.JPG',
 '/assets/166.JPG',
 '/assets/167.JPG',
 '/assets/168.JPG',
 '/assets/169.JPG',
-'/assets/170.HEIC',
+'/assets/170.jpg',
 '/assets/171.JPG',
 '/assets/172.JPG',
-'/assets/173.HEIC',
-'/assets/174.HEIC',
+'/assets/173.jpg',
+'/assets/174.jpg',
 '/assets/175.JPG',
 '/assets/176.JPG',
-'/assets/177.heic',
+'/assets/177.jpg',
 '/assets/178.JPG',
-'/assets/179.heic',
+'/assets/179.jpg',
 '/assets/180.JPG',
 '/assets/181.JPG',
 '/assets/182.JPG',
@@ -251,9 +251,12 @@ const imageUrls = [
 '/assets/184.JPG',
 '/assets/185.JPG',
 '/assets/186.JPG',
-'/assets/187.JPG'
+'/assets/187.JPG',
+'/assets/105.jpg'
 ]
 let slideIndex = 0;
+let slideInterval;
+let audio = document.getElementById("slideshowAudio");
 
 imageUrls.forEach(url => {
   const div = document.createElement('div');
@@ -264,30 +267,56 @@ imageUrls.forEach(url => {
   slideshowContainer.appendChild(div);
 });
 
+
 function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
-  
+
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
+  
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 3000); 
+  if (slideIndex > slides.length) { slideIndex = 1; }
+
+  slides[slideIndex - 1].style.display = "block";
+  
+  if (slides[slideIndex - 1].style.display === "block") {
+    slideInterval = setTimeout(showSlides, 2000); 
+  if(audio.paused){
+    audio.play();
+    audio.volume = 0.2;
+  }
 }
-showSlides();
+}
 
-document.addEventListener('DOMContentLoaded', function(){
-    let video = document.getElementById('officiallyVid');
-    let currentSection = document.getElementById('page2');
+function stopSlides() {
+    let audio = document.getElementById("slideshowAudio");
+    clearTimeout(slideInterval);
+  
+    if (!audio.paused) {
+      audio.pause();
+      audio.currentTime = 0; 
+    }
+  }
 
-    video.addEventListener('ended', function(){
-        let nextSection = document.getElementById('page3');
-        
-        currentSection.style.display="none";
-        
-        if(nextSection){
-            nextSection.style.display="block";
-        }
-    })
-})
+document.addEventListener('DOMContentLoaded', function() {
+  showSlides(); 
+
+  let video = document.getElementById('officiallyVid');
+  let currentSection = document.getElementById('page2');
+
+  video.addEventListener('ended', function() {
+    let nextSection = document.getElementById('page3');
+    
+    currentSection.style.display = "none";
+    
+    if (nextSection) {
+      nextSection.style.display = "block";
+      if (nextSection.style.display === "block") {
+        clearTimeout(slideInterval);
+        slideIndex = 0; 
+        showSlides(); 
+      }
+    }
+  });
+});
