@@ -56,13 +56,14 @@
         <h1 id="pageHead3"> Semua kenangan kita.</h1>
         <p id="lastPageDesc"> Website ini aku buat untuk kamuu, karna aku ga pandai edit video jadi aku pakai cara inii.<br>
             walaupun biasa aja, tapi website ini bisa ada karna kamu yang buat aku mau belajarr<br>
-            Terima kasih banyakk dan aku akan selalu sayang kamuu, enjoy the slideshow <img src="/assets/heart.svg" style="width: 1em; height: inherit;"><br>
-            Kalau sudah selesai kamu bisa pencet tombol next nanti yaaw
-        </p>
+            Terima kasih banyakk dan aku akan selalu sayang kamuu, enjoy the slideshow <img src="/assets/heart.svg" style="width: 1em; height: inherit;"><br>   
+        </p> 
+        <p id="text1">Kalau sudah selesai kamu bisa pencet tombol next nanti yaaw</p>
+        <button class="button" type="button" id="lastBtn"onclick="lastBtn()" style="display: block;">Next</button>
+        
         <div class="slideshow-container">
             
             </div>
-            <button class="button" type="button" id="lastBtn"onclick="lastBtn()">Next</button>
         </div>
     </section>
     <section class="home" id="lastPage" style="display: none;">
@@ -73,9 +74,9 @@
         </p>
 
         <button type="button" class="button" id="ratingBtn">Rating disinii</button>
-        <div class="popup-overlay"></div>
-        
-        <div class="ratingPage" id="rating-Page">
+    </section>
+        <div class="popup-overlay">
+         <div class="ratingPage" id="ratingPage">
             <h2> Berapa ratingnyaa? </h2>
             <div class="stars" id="ratingStars">             
                 <span class="star" data-value="1">&#9733;</span>
@@ -86,8 +87,10 @@
             </div>
             <textarea id="pesan" placeholder="tulis pesan kamu disini"></textarea>
             <button type="button" class="button" id="submitBtn">Submit!</button>
-        </div>
-    </section>
+            </div>
+        </div> 
+        
+   
 
     
     <script src="js/script.js"></script>    

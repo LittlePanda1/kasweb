@@ -276,30 +276,37 @@ imageUrls.forEach(url => {
 function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
   let lastBtn = document.getElementById('lastBtn');
+  let text1 = document.getElementById('text1');
   let audio = document.getElementById("slideshowAudio");
 
+
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+      slides[i].style.display = "none";
   }
 
   slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
+  
+  if (slideIndex > slides.length) {
+      clearTimeout(slideInterval);
+      slideIndex = slides.length;
 
-  slides[slideIndex - 1].style.display = "block";
+      if (text1) {
+          text1.style.display = "none";
+      }
+      if (lastBtn) {
+          lastBtn.style.display = "block";
+      }
 
-  if(slideIndex === slideIndex.length){
-    lastBtn.style.display="block";
   } else {
-    lastBtn.style.display="none";
+      slides[slideIndex - 1].style.display = "block";
+      slideInterval = setTimeout(showSlides, 2000);
+
+      if (audio.paused) {
+          audio.play();
+          audio.volume = 0.2;
+      }
   }
-
-  slideInterval = setTimeout(showSlides, 2000)
-    if (audio.paused) {
-      audio.play();
-      audio.volume = 0.2;
-    }
-
-  } 
+}
 
 
 
@@ -351,51 +358,67 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-  document.getElementById('ratingBtn').addEventListener('click', function(){
-    document.getElementById('ratingPage').classList.add('popup-open');
-    document.querySelector('.poup-overlay').classList.add('popup-open');
-  });
-  
-  const stars = document.querySelectorAll('.star');
-  let ratingValue = 0;
+document.getElementById('ratingBtn').addEventListener('click', function() {
+  document.getElementById('ratingPage').classList.add('popup-open');
+  document.querySelector('.popup-overlay').classList.add('popup-open');
+});
 
-  stars.forEach(star =>{
-    star.addEventListener('click', function(){
-      ratingValue = this.getAttribute('data-value');
-      stars.forEach(s =>s.classList.remove('selected'));
-      for (let i=0; i<ratingValue;i++){
-        stars[i].classList.add('selected');
+
+const stars = document.querySelectorAll('.star');
+let ratingValue = 0;
+
+stars.forEach(star => {
+  star.addEventListener('click', function() {
+    ratingValue = this.getAttribute('data-value');
+    stars.forEach(s => s.classList.remove('selected'));
+    for (let i = 0; i < ratingValue; i++) {
+      stars[i].classList.add('selected');
+    }
+  });
+});
+
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+  const message = document.getElementById('pesan').value;
+
+  if (ratingValue === 0) {
+    alert("Isi dongg jangan dikosongin wkwk");
+    return;
+  }
+
+  const ratingData = {
+    rating: ratingValue,
+    comment: message
+  };
+
+  
+  fetch('/rating', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(ratingData)
+  })
+  .then(response => response.text())
+  .then(data => {
+    alert("Maaciii sudah rating websitenyaa!");
+    document.getElementById('ratingPage').classList.remove('popup-open');
+    document.querySelector('.popup-overlay').classList.remove('popup-open');
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.button');
+
+  buttons.forEach(button => {
+    button.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.keyCode === 13) {
+        event.preventDefault(); 
+        button.click(); 
       }
     });
   });
-
-  document.getElementById('submitBtn').addEventListener('click',function(){
-    const message = document.getElementById('message').value;
-
-    if(ratingValue === 0){
-      alert("isi dongg jangan dikosongin wkwk");
-      return;
-    }
-
-    const ratingData = {
-      rating : ratingValue,
-      comment : message 
-    };
-
-    fetch('/rating',{
-      method : 'POST',
-      header : {
-        'Content-type' : 'application/json',
-      },
-      body : JSON.stringify(ratingData)
-    })
-    .then(response => response.text())
-    .then(data =>{
-      alert("Maaciii sudah rating websitenyaa!")
-      document.getElementById('ratingPage').classList.remove('popup-open');
-      document.querySelector('.popup-overlay').classList.remove('popup-open');
-    })
-    .catch(error =>{
-      console.error('Error:',error);
-    });
-  });
+});
