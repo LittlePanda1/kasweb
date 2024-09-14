@@ -100,7 +100,6 @@ const imageUrls = [
 '/assets/25.jpg',
 '/assets/26.JPG',
 '/assets/27.jpg',
-'/assets/28.HEIF',
 '/assets/29.jpg',
 '/assets/30.jpg',
 '/assets/31.jpg',
