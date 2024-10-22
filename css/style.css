@@ -142,6 +142,7 @@ label {
     flex-direction: column;
     overflow: hidden;
     background: transparent; 
+    max-height: 299px;
 }
 
 .mySlides {

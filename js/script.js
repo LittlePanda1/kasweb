@@ -299,7 +299,7 @@ function showSlides() {
 
   } else {
       slides[slideIndex - 1].style.display = "block";
-      slideInterval = setTimeout(showSlides, 2000);
+      slideInterval = setTimeout(showSlides, 500);
 
       if (audio.paused) {
           audio.play();
@@ -323,15 +323,13 @@ function stopSlides() {
 
 function lastBtn(){
   let page3 = document.getElementById('page3');
-  let lastPage = document.getElementById('lastPage');
+  document.getElementById("lastPage").classList.add('popup-open');
+  document.querySelector('.popup-overlay').classList.add('popup-open');
 
   if(page3){
     page3.style.display="none";
   }
 
-  if(lastPage) {
-    lastPage.style.display="block";
-  }
 
   stopSlides();
 }
@@ -392,7 +390,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
   };
 
   
-  fetch('/rating', {
+  fetch('http://localhost:3000/rating', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
